@@ -126,6 +126,8 @@ The development environment requires the following tools to be installed:
 ```sh
 # Clone the repository
 git clone https://github.com/botpress/botpress.git
+# For a faster download, you can perform a shallow clone instead:
+# git clone --depth=1 https://github.com/botpress/botpress.git
 cd botpress
 
 # Install dependencies
@@ -133,6 +135,9 @@ pnpm install
 
 # Build all packages
 pnpm run build
+
+# Build a specific package (replace <package>)
+pnpm turbo run build --filter <package>
 
 # Run Checks
 pnpm run check
